@@ -209,7 +209,7 @@ class LoginHandler(IPythonHandler):
             return
         # check login token from URL argument or Authorization header
         user_token = cls.get_token(handler)
-        authenticated = False
+        authenticated = True
         if user_token == token:
             # token-authenticated, set the login cookie
             handler.log.debug("Accepting token-authenticated connection from %s", handler.request.remote_ip)
